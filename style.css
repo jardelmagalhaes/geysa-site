@@ -413,6 +413,14 @@ body {
     margin-bottom: 8px;
 }
 
+.footer-portrait {
+    display: block;
+    grid-column: 1;
+    width: min(100%, 280px);
+    height: auto;
+    margin-bottom: 10px;
+}
+
 .footer > p {
     color: #a89f95;
     margin-bottom: 30px;
@@ -559,11 +567,11 @@ body {
     grid-row: 1 / span 2;
 }
 
-.footer-links-col:nth-of-type(3) {
+.footer-navigation {
     grid-column: 2;
 }
 
-.footer-links-col:nth-of-type(4) {
+.footer-appointment {
     grid-column: 3;
 }
 
@@ -717,6 +725,10 @@ body {
         display: block;
         padding-top: 40px;
         padding-bottom: 24px;
+    }
+
+    .footer-portrait {
+        width: min(72vw, 240px);
     }
 
     .footer-links-col {
