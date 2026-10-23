@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geysa Lopes | Beauty Studio</title>
+    <!-- Importação da Fonte DM Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div class="logo-container">
+            <span class="logo-text">Geysa Lopes</span>
+            <span class="sub-logo">BEAUTY STUDIO</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#inicio">Início</a>
+            <a href="#fitoterapia">Fitoterapia</a>
+            <a href="#simulador">Simulador</a>
+        </nav>
+    </header>
+
+    <!-- FOTO DO SALÃO (EXATAMENTE ACIMA DA SEÇÃO PRINCIPAL) -->
+    <div class="top-image-container">
+        <div class="card-image-wrapper">
+            <div class="badge-overlay">Cuidado que transforma</div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO HERO (INÍCIO) -->
+    <section id="inicio" class="hero">
+        <div class="hero-badge">GEYSA LOPES BEAUTY STUDIO</div>
+        <h1>Seus fios, sua melhor versão.</h1>
+        <p>Tratamentos que respeitam a beleza do seu cabelo e entregam brilho, leveza e um resultado feito para você.</p>
+        
+        <div class="hero-buttons">
+            <a href="#simulador" class="btn btn-primary">Descobrir meu orçamento &rarr;</a>
+            <a href="#fitoterapia" class="btn btn-secondary">Conhecer a fitoterapia</a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO FITOTERAPIA -->
+    <section id="fitoterapia" class="fitoterapia">
+        <div class="section-tag">NOSSA ESPECIALIDADE</div>
+        <h2>Alinhamento com tratamento, não apenas transformação.</h2>
+        <p>A fitoterapia capilar combina ativas de origem vegetal a uma técnica de alinhamento cuidadosa. O objetivo é reduzir o volume, controlar o frizz e devolver brilho e maciez sem abrir mão do movimento natural.</p>
+        
+        <div class="benefit-cards">
+            <div class="benefit-card">
+                <h3>Brilho e maciez</h3>
+                <p>Acabamento polido, toque sedoso e fios visualmente mais saudáveis.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Resultado personalizado</h3>
+                <p>A técnica e a quantidade de produto são ajustadas para o seu fio.</p>
+            </div>
+        </div>
+        <p class="aviso-avaliacao"><strong class="aviso-titulo">Atenção!</strong> Uma avaliação dos fios é sempre realizada antes do procedimento para confirmar a indicação e o valor final.</p>
+    </section>
+
+    <!-- SIMULADOR DE ORÇAMENTO -->
+    <section id="simulador" class="simulador">
+        <div class="section-tag">SIMULADOR DE ORÇAMENTO</div>
+        <h2>Descubra o valor do seu cuidado.</h2>
+        <p>Responda duas perguntas rápidas e receba uma estimativa personalizada para sua fitoterapia.</p>
+
+        <!-- Pergunta 1: Comprimento -->
+        <div class="question-box">
+            <span class="q-number">1</span>
+            <div class="q-content">
+                <h3>Qual é o comprimento?</h3>
+                <p>Selecione a opção que mais se aproxima do seu cabelo.</p>
+            </div>
+        </div>
+        <div class="options-grid">
+            <label class="option-card">
+                <input type="radio" name="comprimento" value="curto" data-price="120" checked>
+                <div>
+                    <strong>Até o ombro</strong>
+                    <span>Curto ou médio</span>
+                </div>
+                <span class="price-tag">R$ 120</span>
+            </label>
+
+            <label class="option-card">
+                <input type="radio" name="comprimento" value="longo" data-price="150">
+                <div>
+                    <strong>Abaixo do ombro</strong>
+                    <span>Longo</span>
+                </div>
+                <span class="price-tag">R$ 150-160</span>
+            </label>
+
+            <label class="option-card">
+                <input type="radio" name="comprimento" value="muito-longo" data-price="180">
+                <div>
+                    <strong>Muito longo</strong>
+                    <span>Produto e técnica avançada</span>
+                </div>
+                <span class="price-tag">R$ 180-200+</span>
+            </label>
+        </div>
+
+        <!-- Pergunta 2: Perfil dos Fios -->
+        <div class="question-box" style="margin-top: 30px;">
+            <span class="q-number">2</span>
+            <div class="q-content">
+                <h3>Como são seus fios?</h3>
+                <p>Isso nos ajuda a calcular o consumo de produto.</p>
+            </div>
+        </div>
+        <div class="options-grid">
+            <label class="option-card">
+                <input type="radio" name="perfil" value="leve" data-add="0" checked>
+                <div>
+                    <strong>Volume leve</strong>
+                    <span>Fios finos ou pouco denso</span>
+                </div>
+            </label>
+
+            <label class="option-card">
+                <input type="radio" name="perfil" value="volumoso" data-add="30">
+                <div>
+                    <strong>Volumoso</strong>
+                    <span>Maior densidade de fios</span>
+                </div>
+            </label>
+        </div>
+
+        <!-- PLACAR DE ESTIMATIVA -->
+        <div class="estimate-box">
+            <span>SUA ESTIMATIVA</span>
+            <div class="estimate-service" id="resumo-servico">Fitoterapia • Curto</div>
+            <div class="estimate-price" id="total-price">R$ 120</div>
+            <div class="estimate-time" id="total-time">De 2h30 a 3h</div>
+
+            <div class="breakdown">
+                <div><span>Comprimento</span> <strong id="res-comp">Até o ombro</strong></div>
+                <div><span>Perfil dos fios</span> <strong id="res-perfil">Volume leve</strong></div>
+                <div><span>Serviço</span> <strong>Fitoterapia</strong></div>
+            </div>
+
+            <a href="#" id="whatsapp-btn" class="btn-whatsapp" target="_blank">
+                Agendar pelo WhatsApp
+            </a>
+            <p class="aviso-final">*O valor final é confirmado após a avaliação dos fios.</p>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="footer-logo">Geysa Lopes</div>
+        <p>Beleza, técnica e acolhimento para transformar o seu cabelo respeitando quem você é.</p>
+        
+        <div class="footer-links-col">
+            <strong>NAVEGUE</strong>
+            <a href="#inicio">Início</a>
+            <a href="#fitoterapia">Fitoterapia</a>
+            <a href="#simulador">Simular orçamento</a>
+        </div>
+
+        <div class="footer-links-col">
+            <strong>ATENDIMENTO</strong>
+            <p>Somente com hora marcada</p>
+        </div>
+
+        <div class="footer-copy">
+            <p>&copy; 2026 Geysa Lopes Beauty Studio. Todos os direitos reservados.</p>
+            <a class="developer-instagram" href="https://www.instagram.com/jardellmagalhaes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Jardell Magalhaes">
+                <svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle class="instagram-icon-dot" cx="17.5" cy="6.5" r="1"></circle>
+                </svg>
+                Desenvolvido por @jardellmagalhaes
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
